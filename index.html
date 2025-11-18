@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Free Fire Wiki</title>
+</head>
+<body style="font-family: Arial; background:#111; color:#fff;">
+  <h1>🔥 Free Fire Wiki — Backend Conectado 🔥</h1>
+  <p id="respuesta">Cargando datos del backend...</p>
+
+  <script>
+    fetch("/api/info")
+      .then(r => r.json())
+      .then(data => {
+        document.getElementById("respuesta").innerText =
+          "Mensaje del backend: " + data.mensaje;
+      })
+      .catch(() => {
+        document.getElementById("respuesta").innerText =
+          "No se pudo conectar al backend.";
+      });
+  </script>
+</body>
+</html>
