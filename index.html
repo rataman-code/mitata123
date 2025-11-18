@@ -5,8 +5,22 @@
   <title>Free Fire Wiki</title>
 </head>
 <body style="font-family: Arial; background:#111; color:#fff;">
+
   <h1>🔥 Free Fire Wiki — Backend Conectado 🔥</h1>
-  <p id="respuesta">Cargando datos del backend...</p>
+
+  <h2 style="margin-top:20px;">Armas del Juego</h2>
+  <ul style="list-style:none; padding:0; font-size:22px;">
+    <li>🔫 Pistola</li>
+    <li>🔪 Cuchillo táctico</li>
+    <li>🗡️ Katana</li>
+    <li>💣 Granada</li>
+    <li>🏹 Arco explosivo</li>
+    <li>🔧 Mazo improvisado</li>
+    <li>🛡️ Escudo de choque</li>
+    <li>⚔️ Duales</li>
+  </ul>
+
+  <p id="respuesta" style="margin-top:30px;">Cargando datos del backend...</p>
 
   <script>
     fetch("/api/info")
@@ -17,8 +31,9 @@
       })
       .catch(() => {
         document.getElementById("respuesta").innerText =
-          "No se pudo conectar al backend.";
+          "No se pudo conectar al backend. Chingadera.";
       });
   </script>
+
 </body>
 </html>
